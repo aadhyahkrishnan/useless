@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banana Yatra 🍌 | Kerala Distance Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="banana banana1">🍌</div>
+  <div class="banana banana2">🍌</div>
+  <div class="banana banana3">🍌</div>
+
+  <main class="container">
+    <section class="hero">
+      <div class="badge">🍌 KERALA'S MOST USELESS MEASUREMENT SYSTEM</div>
+      <h1>Banana <span>Yatra</span></h1>
+      <p class="subtitle">How far is it? Don't ask Google. Ask a banana. 😎</p>
+      <p class="tiny">A completely unnecessary • surprisingly scientific • totally banana-powered distance calculator</p>
+    </section>
+
+    <section class="card">
+      <div class="route-grid">
+        <div class="field">
+          <label>📍 FROM</label>
+          <select id="from">
+            <option value="">Choose a district</option>
+            {% for d in districts %}
+              <option value="{{ d }}">{{ d }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <button class="swap" id="swap" title="Swap districts">⇄</button>
+
+        <div class="field">
+          <label>🏁 TO</label>
+          <select id="to">
+            <option value="">Choose a district</option>
+            {% for d in districts %}
+              <option value="{{ d }}">{{ d }}</option>
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      <div class="banana-section">
+        <label>🍌 CHOOSE YOUR BANANA WEAPON</label>
+        <div class="banana-options">
+          {% for name, length in bananas.items() %}
+          <label class="banana-option">
+            <input type="radio" name="banana" value="{{ name }}" {% if loop.first %}checked{% endif %}>
+            <span class="banana-card">
+              <span class="fruit">🍌</span>
+              <strong>{{ name }}</strong>
+              <small>{{ (length * 100)|int }} cm banana</small>
+            </span>
+          </label>
+          {% endfor %}
+        </div>
+      </div>
+
+      <button class="calculate" id="calculate">
+        <span>CALCULATE IN BANANAS</span> 🍌
+      </button>
+
+      <div class="loading" id="loading">🍌 Measuring... please do not eat the measuring equipment.</div>
+      <div class="error" id="error"></div>
+    </section>
+
+    <section class="result" id="result">
+      <div class="result-top">🎉 THE OFFICIAL TOTALLY-UNNECESSARY ANSWER 🎉</div>
+      <div class="route-text" id="routeText"></div>
+      <div class="big-number" id="bananaCount">0</div>
+      <div class="banana-word" id="bananaWord">BANANAS 🍌</div>
+      <div class="distance" id="distance"></div>
+      <div class="joke" id="joke"></div>
+      <div class="method" id="method"></div>
+    </section>
+
+    <footer>
+      <div>Made with ❤️, JavaScript & an unreasonable amount of bananas.</div>
+      <div class="warning">⚠️ Banana length values are playful project assumptions, not scientific standards.</div>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
