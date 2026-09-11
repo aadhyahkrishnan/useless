@@ -1,0 +1,1762 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family:
+        'Segoe UI',
+        'Poppins',
+        system-ui,
+        sans-serif;
+}
+
+
+/* =========================================================
+   🐒 HIDE NORMAL POINTER
+========================================================= */
+
+html,
+body,
+body *,
+body *::before,
+body *::after {
+    cursor: none !important;
+}
+
+
+/* =========================================================
+   🐒 MONKEY CURSOR
+========================================================= */
+
+#monkeyCursor {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    z-index: 999999;
+
+    will-change: transform;
+
+    transform:
+        translate(-5px, -5px);
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    background:
+        linear-gradient(
+            145deg,
+            #fff9e6 0%,
+            #ffe9b6 100%
+        );
+
+    min-height: 100vh;
+
+    padding:
+        25px 15px;
+
+    position:
+        relative;
+
+    overflow-x:
+        hidden;
+}
+
+
+/* =========================================================
+   FLOATING BANANAS
+========================================================= */
+
+.float-banana {
+    position: fixed;
+
+    font-size:
+        2.5rem;
+
+    opacity:
+        0.15;
+
+    pointer-events:
+        none;
+
+    z-index:
+        0;
+
+    animation:
+        floatBanana
+        12s
+        infinite
+        ease-in-out;
+}
+
+
+.float-banana:nth-of-type(2) {
+    top:
+        5%;
+
+    left:
+        2%;
+
+    animation-duration:
+        14s;
+}
+
+
+.float-banana:nth-of-type(3) {
+    top:
+        70%;
+
+    left:
+        88%;
+
+    font-size:
+        4rem;
+
+    animation-duration:
+        18s;
+}
+
+
+.float-banana:nth-of-type(4) {
+    top:
+        20%;
+
+    left:
+        92%;
+
+    animation-duration:
+        12s;
+}
+
+
+.float-banana:nth-of-type(5) {
+    top:
+        85%;
+
+    left:
+        5%;
+
+    font-size:
+        3.2rem;
+
+    animation-duration:
+        16s;
+}
+
+
+.float-banana:nth-of-type(6) {
+    top:
+        45%;
+
+    left:
+        1%;
+
+    animation-duration:
+        20s;
+}
+
+
+.float-banana:nth-of-type(7) {
+    top:
+        10%;
+
+    left:
+        80%;
+
+    animation-duration:
+        13s;
+}
+
+
+@keyframes floatBanana {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        transform:
+            translateY(-30px)
+            rotate(15deg);
+    }
+
+    100% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.container {
+    width:
+        100%;
+
+    max-width:
+        900px;
+
+    margin:
+        0 auto;
+
+    background:
+        rgba(
+            255,
+            255,
+            240,
+            0.94
+        );
+
+    backdrop-filter:
+        blur(8px);
+
+    border:
+        4px solid
+        #f5c542;
+
+    border-radius:
+        60px;
+
+    padding:
+        40px 35px;
+
+    box-shadow:
+
+        0 25px 45px
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        ),
+
+        inset
+        0 0 0 8px
+        #fff3cf;
+
+    position:
+        relative;
+
+    z-index:
+        10;
+
+    animation:
+        containerPop
+        0.7s
+        ease;
+}
+
+
+@keyframes containerPop {
+
+    from {
+        transform:
+            scale(0.94);
+
+        opacity:
+            0;
+    }
+
+    to {
+        transform:
+            scale(1);
+
+        opacity:
+            1;
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+h1 {
+    font-size:
+        3rem;
+
+    color:
+        #7a4d00;
+
+    text-align:
+        center;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+    flex-wrap:
+        wrap;
+
+    text-shadow:
+        4px 4px 0
+        #ffd966;
+
+    margin-bottom:
+        8px;
+}
+
+
+h1 span {
+    font-size:
+        3.2rem;
+
+    display:
+        inline-block;
+
+    animation:
+        spinBanana
+        4s
+        infinite
+        linear;
+}
+
+
+@keyframes spinBanana {
+
+    0% {
+        transform:
+            rotate(0deg);
+    }
+
+    25% {
+        transform:
+            rotate(20deg);
+    }
+
+    75% {
+        transform:
+            rotate(-20deg);
+    }
+
+    100% {
+        transform:
+            rotate(0deg);
+    }
+
+}
+
+
+.tagline {
+    text-align:
+        center;
+
+    color:
+        #866221;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        30px;
+}
+
+
+/* =========================================================
+   LOCATION CARD
+========================================================= */
+
+.location-card {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf0,
+            #fff4cb
+        );
+
+    border:
+        3px solid
+        #f4c45d;
+
+    border-radius:
+        35px;
+
+    padding:
+        25px;
+
+    margin-bottom:
+        15px;
+
+    box-shadow:
+        0 7px 0
+        #dca945;
+}
+
+
+.location-card h2 {
+
+    text-align:
+        center;
+
+    color:
+        #704d16;
+
+    margin-bottom:
+        20px;
+
+    font-size:
+        1.4rem;
+}
+
+
+/* =========================================================
+   SELECT GROUP
+========================================================= */
+
+.select-group {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        8px;
+
+    margin-bottom:
+        18px;
+}
+
+
+.select-group:last-child {
+
+    margin-bottom:
+        0;
+}
+
+
+.select-group label {
+
+    color:
+        #5a3a0b;
+
+    font-size:
+        1rem;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+select {
+
+    width:
+        100%;
+
+    padding:
+        15px 20px;
+
+    border:
+        3px solid
+        #f7c35c;
+
+    border-radius:
+        60px;
+
+    background:
+        #fffcf0;
+
+    color:
+        #3e2c0f;
+
+    font-size:
+        1.1rem;
+
+    font-weight:
+        600;
+
+    outline:
+        none;
+
+    appearance:
+        none;
+
+    background-image:
+        url(
+            "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23b57c1c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>"
+        );
+
+    background-repeat:
+        no-repeat;
+
+    background-position:
+        right 20px center;
+
+    background-size:
+        25px;
+
+    transition:
+        all 0.15s ease;
+}
+
+
+select:focus {
+
+    transform:
+        translateY(2px);
+
+    border-color:
+        #e4ac34;
+
+    box-shadow:
+        0 4px 0
+        #dba43c,
+
+        0 0 0 3px
+        rgba(
+            247,
+            195,
+            92,
+            0.2
+        );
+}
+
+
+select:disabled {
+
+    opacity:
+        0.65;
+
+    background:
+        #f5f0df;
+}
+
+
+/* =========================================================
+   FROM INFO
+========================================================= */
+
+.from-info {
+
+    margin-top:
+        8px;
+
+    padding:
+        10px 15px;
+
+    background:
+        #fff3c9;
+
+    border:
+        2px dashed
+        #e2b24c;
+
+    border-radius:
+        25px;
+
+    text-align:
+        center;
+
+    color:
+        #866221;
+
+    font-size:
+        0.85rem;
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   SWAP
+========================================================= */
+
+.swap-area {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        10px 0 20px;
+}
+
+
+.swap-btn {
+
+    background:
+        #ffeaa6;
+
+    border:
+        3px solid
+        #e6b84c;
+
+    border-radius:
+        50px;
+
+    padding:
+        11px 25px;
+
+    font-size:
+        1.1rem;
+
+    font-weight:
+        800;
+
+    color:
+        #6b4a1b;
+
+    box-shadow:
+        0 6px 0
+        #c99938;
+
+    transition:
+        all 0.15s ease;
+}
+
+
+.swap-btn:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+.swap-btn:active {
+
+    transform:
+        translateY(4px);
+
+    box-shadow:
+        0 2px 0
+        #c99938;
+}
+
+
+/* =========================================================
+   API STATUS
+========================================================= */
+
+.api-status {
+
+    min-height:
+        18px;
+
+    margin-top:
+        5px;
+
+    text-align:
+        center;
+
+    font-size:
+        0.8rem;
+
+    color:
+        #8a6a2f;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   BANANA SELECTION
+========================================================= */
+
+.banana-selection {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        8px;
+
+    margin-top:
+        20px;
+}
+
+
+.banana-selection label {
+
+    color:
+        #5a3a0b;
+
+    font-size:
+        1.15rem;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.price-tag {
+
+    margin-top:
+        20px;
+
+    padding:
+        14px 22px;
+
+    border:
+        2px dashed
+        #b98a3a;
+
+    border-radius:
+        40px;
+
+    background:
+        #fceab8;
+
+    color:
+        #6b4a1b;
+
+    font-weight:
+        700;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+}
+
+
+.today-price {
+
+    background:
+        #ffffffd0;
+
+    padding:
+        7px 18px;
+
+    border-radius:
+        30px;
+
+    border:
+        2px solid
+        #ffbe3f;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.error-message {
+
+    display:
+        none;
+
+    margin-top:
+        15px;
+
+    width:
+        100%;
+
+    padding:
+        13px 20px;
+
+    background:
+        #fff3cd;
+
+    border:
+        2px solid
+        #f0b429;
+
+    border-radius:
+        50px;
+
+    color:
+        #8a5a00;
+
+    font-weight:
+        800;
+
+    text-align:
+        center;
+
+    animation:
+        errorAppear
+        0.3s
+        ease;
+}
+
+
+@keyframes errorAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(-8px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   CALCULATE
+========================================================= */
+
+.btn-calc {
+
+    width:
+        100%;
+
+    margin-top:
+        20px;
+
+    padding:
+        21px 25px;
+
+    border:
+        2px solid
+        #ffe28a;
+
+    border-radius:
+        80px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd15a,
+            #ffb82e
+        );
+
+    color:
+        #4a3000;
+
+    font-size:
+        1.6rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        0.5px;
+
+    box-shadow:
+
+        0 10px 0
+        #a56f1f,
+
+        0 12px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.16
+        );
+
+    transition:
+        all 0.15s ease;
+}
+
+
+.btn-calc:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+.btn-calc:active {
+
+    transform:
+        translateY(6px);
+
+    box-shadow:
+        0 4px 0
+        #a56f1f;
+}
+
+
+.btn-calc:disabled {
+
+    opacity:
+        0.7;
+}
+
+
+/* =========================================================
+   OSM CREDIT
+========================================================= */
+
+.osm-credit {
+
+    text-align:
+        center;
+
+    margin-top:
+        15px;
+
+    color:
+        #92784a;
+
+    font-size:
+        0.72rem;
+}
+
+
+.osm-credit a {
+
+    color:
+        #765718;
+
+    text-decoration:
+        underline;
+}
+
+
+/* =========================================================
+   OUTPUT PAGE
+========================================================= */
+
+.output-page {
+
+    display:
+        none;
+
+    margin-top:
+        15px;
+
+    background:
+        #fffdf5;
+
+    border:
+        4px solid
+        #f5c542;
+
+    border-radius:
+        60px;
+
+    padding:
+        30px;
+
+    box-shadow:
+
+        inset
+        0 0 0 8px
+        #fff3cf,
+
+        0 20px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.1
+        );
+
+    animation:
+        outputAppear
+        0.5s
+        ease;
+}
+
+
+@keyframes outputAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(25px)
+            scale(0.96);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   OUTPUT TITLE
+========================================================= */
+
+.output-title {
+
+    text-align:
+        center;
+
+    color:
+        #6f4a0e;
+
+    font-size:
+        2.2rem;
+
+    padding-bottom:
+        20px;
+
+    border-bottom:
+        5px dotted
+        #ffd966;
+
+    margin-bottom:
+        25px;
+}
+
+
+/* =========================================================
+   ROUTE PILL
+========================================================= */
+
+.route-pill {
+
+    width:
+        fit-content;
+
+    max-width:
+        100%;
+
+    margin:
+        0 auto 15px;
+
+    padding:
+        12px 28px;
+
+    border:
+        3px solid
+        #f7c35c;
+
+    border-radius:
+        999px;
+
+    background:
+        #fff2d7;
+
+    color:
+        #704d16;
+
+    font-size:
+        1.3rem;
+
+    font-weight:
+        900;
+
+    text-align:
+        center;
+
+    box-shadow:
+        0 5px 0
+        #dba43c;
+}
+
+
+/* =========================================================
+   PLACE ROUTE
+========================================================= */
+
+.place-route {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    flex-wrap:
+        wrap;
+
+    margin-bottom:
+        25px;
+
+    color:
+        #765321;
+
+    font-size:
+        1.05rem;
+}
+
+
+.place-route div {
+
+    padding:
+        8px 18px;
+
+    background:
+        #fff8df;
+
+    border:
+        2px solid
+        #f4c45d;
+
+    border-radius:
+        999px;
+
+    max-width:
+        100%;
+
+    text-align:
+        center;
+}
+
+
+/* =========================================================
+   MAIN BANANA RESULT
+========================================================= */
+
+.banana-result {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff9d8,
+            #ffe996
+        );
+
+    border:
+        4px solid
+        #f7c35c;
+
+    border-radius:
+        80px;
+
+    padding:
+        30px 20px;
+
+    text-align:
+        center;
+
+    box-shadow:
+        0 10px 0
+        #dba43c;
+
+    animation:
+        popResult
+        0.6s
+        ease;
+}
+
+
+@keyframes popResult {
+
+    0% {
+        transform:
+            scale(0.85);
+    }
+
+    70% {
+        transform:
+            scale(1.03);
+    }
+
+    100% {
+        transform:
+            scale(1);
+    }
+}
+
+
+.result-label {
+
+    color:
+        #7a531b;
+
+    font-size:
+        1.15rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1px;
+}
+
+
+.big-number {
+
+    font-size:
+        5rem;
+
+    line-height:
+        1;
+
+    font-weight:
+        900;
+
+    color:
+        #9b6b1f;
+
+    margin:
+        12px 0;
+
+    text-shadow:
+        4px 4px 0
+        #ffe28a;
+
+    word-break:
+        break-word;
+
+    animation:
+        countUp
+        0.8s
+        ease;
+}
+
+
+@keyframes countUp {
+
+    0% {
+
+        transform:
+            scale(0.5);
+
+        opacity:
+            0;
+    }
+
+    60% {
+
+        transform:
+            scale(1.1);
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+
+        opacity:
+            1;
+    }
+}
+
+
+.banana-word {
+
+    font-size:
+        1.6rem;
+
+    font-weight:
+        900;
+
+    color:
+        #936f2b;
+
+    letter-spacing:
+        2px;
+}
+
+
+/* =========================================================
+   SEPARATE OVAL RESULT BOXES
+========================================================= */
+
+.result-pills {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+    margin:
+        30px 0 15px;
+
+    flex-wrap:
+        wrap;
+}
+
+
+.result-pill {
+
+    flex:
+        1;
+
+    min-width:
+        190px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        13px 20px;
+
+    background:
+        #fff8df;
+
+    border:
+        3px solid
+        #f4c45d;
+
+    border-radius:
+        999px;
+
+    box-shadow:
+        0 5px 0
+        #dca945;
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.result-pill:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 8px 0
+        #dca945;
+}
+
+
+.pill-icon {
+
+    width:
+        46px;
+
+    height:
+        46px;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        #ffe9a8;
+
+    border:
+        2px solid
+        #efc354;
+
+    font-size:
+        1.35rem;
+
+    flex-shrink:
+        0;
+}
+
+
+.pill-content {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+}
+
+
+.pill-title {
+
+    font-size:
+        0.75rem;
+
+    text-transform:
+        uppercase;
+
+    letter-spacing:
+        0.8px;
+
+    font-weight:
+        800;
+
+    color:
+        #97743a;
+}
+
+
+.pill-content strong {
+
+    font-size:
+        1.1rem;
+
+    color:
+        #5a3a0b;
+
+    margin-top:
+        2px;
+}
+
+
+/* =========================================================
+   FUNNY MESSAGE
+========================================================= */
+
+.funny-message {
+
+    margin-top:
+        25px;
+
+    padding:
+        18px 25px;
+
+    background:
+        #fff1cc;
+
+    border:
+        3px dashed
+        #f7c35c;
+
+    border-radius:
+        50px;
+
+    color:
+        #7a4d00;
+
+    font-size:
+        1.2rem;
+
+    font-weight:
+        700;
+
+    text-align:
+        center;
+
+    position:
+        relative;
+
+    animation:
+        funnyAppear
+        0.5s
+        ease;
+}
+
+
+@keyframes funnyAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(10px);
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+.funny-message::before {
+
+    content:
+        "😂";
+
+    position:
+        absolute;
+
+    left:
+        20px;
+
+    top:
+        -18px;
+
+    font-size:
+        2rem;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.btn-back {
+
+    width:
+        100%;
+
+    margin-top:
+        30px;
+
+    padding:
+        16px 25px;
+
+    border:
+        2px solid
+        #fff1c1;
+
+    border-radius:
+        60px;
+
+    background:
+        #e7c885;
+
+    color:
+        #3f2c0c;
+
+    font-size:
+        1.2rem;
+
+    font-weight:
+        800;
+
+    box-shadow:
+        0 7px 0
+        #b3893a;
+
+    transition:
+        all 0.15s ease;
+}
+
+
+.btn-back:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+.btn-back:active {
+
+    transform:
+        translateY(5px);
+
+    box-shadow:
+        0 2px 0
+        #b3893a;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+
+        padding:
+            12px;
+    }
+
+
+    .container {
+
+        padding:
+            25px 18px;
+
+        border-radius:
+            45px;
+    }
+
+
+    h1 {
+
+        font-size:
+            2rem;
+    }
+
+
+    h1 span {
+
+        font-size:
+            2.3rem;
+    }
+
+
+    .location-card {
+
+        padding:
+            20px;
+
+        border-radius:
+            28px;
+    }
+
+
+    .output-page {
+
+        padding:
+            25px 15px;
+
+        border-radius:
+            45px;
+    }
+
+
+    .output-title {
+
+        font-size:
+            1.7rem;
+    }
+
+
+    .big-number {
+
+        font-size:
+            3.3rem;
+    }
+
+
+    .result-pills {
+
+        flex-direction:
+            column;
+    }
+
+
+    .result-pill {
+
+        width:
+            100%;
+
+        min-width:
+            0;
+
+        justify-content:
+            flex-start;
+    }
+
+
+    .route-pill {
+
+        font-size:
+            1rem;
+
+        padding:
+            10px 18px;
+    }
+
+
+    .place-route {
+
+        flex-direction:
+            column;
+
+        gap:
+            10px;
+    }
+
+
+    .place-route div {
+
+        width:
+            100%;
+    }
+
+
+    .btn-calc {
+
+        font-size:
+            1.35rem;
+
+        padding:
+            18px 15px;
+    }
+
+
+    .price-tag {
+
+        justify-content:
+            center;
+
+        text-align:
+            center;
+    }
+
+
+    #monkeyCursor {
+
+        font-size:
+            26px;
+    }
+
+}

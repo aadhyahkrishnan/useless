@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        🍌 Bananameter 🍌
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         🐒 MONKEY CURSOR
+    ====================================================== -->
+
+    <div
+        id="monkeyCursor"
+        aria-hidden="true"
+    >
+        🐒
+    </div>
+
+
+    <!-- =====================================================
+         FLOATING BANANAS
+    ====================================================== -->
+
+    <div class="float-banana">🍌</div>
+    <div class="float-banana">🍌</div>
+    <div class="float-banana">🍌</div>
+    <div class="float-banana">🍌</div>
+    <div class="float-banana">🍌</div>
+    <div class="float-banana">🍌</div>
+
+
+    <!-- =====================================================
+         MAIN CONTAINER
+    ====================================================== -->
+
+    <main
+        class="container"
+        id="mainContainer"
+    >
+
+
+        <!-- =================================================
+             INPUT PAGE
+        ================================================== -->
+
+        <section id="inputPage">
+
+
+            <!-- TITLE -->
+
+            <h1>
+
+                <span>🍌</span>
+
+                BANANAMETER
+
+                <span>🍌</span>
+
+            </h1>
+
+
+            <p class="tagline">
+                🍌 “Why count kilometres when you can count bananas?” 😂
+            </p>
+
+
+            <!-- =================================================
+                 FROM
+            ================================================== -->
+
+            <div class="location-card">
+
+
+                <h2>
+                    📍 FROM
+                </h2>
+
+
+                <div class="select-group">
+
+                    <label for="fromDistrict">
+                        Select starting district
+                    </label>
+
+
+                    <select id="fromDistrict">
+
+                        <option
+                            value=""
+                            selected
+                            disabled
+                        >
+                            Choose starting district
+                        </option>
+
+
+                        <option value="Thiruvananthapuram">
+                            Thiruvananthapuram
+                        </option>
+
+                        <option value="Kollam">
+                            Kollam
+                        </option>
+
+                        <option value="Pathanamthitta">
+                            Pathanamthitta
+                        </option>
+
+                        <option value="Alappuzha">
+                            Alappuzha
+                        </option>
+
+                        <option value="Kottayam">
+                            Kottayam
+                        </option>
+
+                        <option value="Idukki">
+                            Idukki
+                        </option>
+
+                        <option value="Ernakulam">
+                            Ernakulam
+                        </option>
+
+                        <option value="Thrissur">
+                            Thrissur
+                        </option>
+
+                        <option value="Palakkad">
+                            Palakkad
+                        </option>
+
+                        <option value="Malappuram">
+                            Malappuram
+                        </option>
+
+                        <option value="Kozhikode">
+                            Kozhikode
+                        </option>
+
+                        <option value="Wayanad">
+                            Wayanad
+                        </option>
+
+                        <option value="Kannur">
+                            Kannur
+                        </option>
+
+                        <option value="Kasaragod">
+                            Kasaragod
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="from-info">
+
+                    We Picked the Centre,
+                    <strong>Don't ask Whyyyyy???</strong>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 SWAP
+            ================================================== -->
+
+            <div class="swap-area">
+
+                <button
+                    type="button"
+                    class="swap-btn"
+                    id="swapBtn"
+                >
+
+                    🔄
+                    Swap Journey
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 TO
+            ================================================== -->
+
+            <div class="location-card">
+
+
+                <h2>
+                    🎯 TO
+                </h2>
+
+
+                <!-- TO DISTRICT -->
+
+                <div class="select-group">
+
+                    <label for="toDistrict">
+                        Select destination district
+                    </label>
+
+
+                    <select id="toDistrict">
+
+                        <option
+                            value=""
+                            selected
+                            disabled
+                        >
+                            Choose destination district
+                        </option>
+
+
+                        <option value="Thiruvananthapuram">
+                            Thiruvananthapuram
+                        </option>
+
+                        <option value="Kollam">
+                            Kollam
+                        </option>
+
+                        <option value="Pathanamthitta">
+                            Pathanamthitta
+                        </option>
+
+                        <option value="Alappuzha">
+                            Alappuzha
+                        </option>
+
+                        <option value="Kottayam">
+                            Kottayam
+                        </option>
+
+                        <option value="Idukki">
+                            Idukki
+                        </option>
+
+                        <option value="Ernakulam">
+                            Ernakulam
+                        </option>
+
+                        <option value="Thrissur">
+                            Thrissur
+                        </option>
+
+                        <option value="Palakkad">
+                            Palakkad
+                        </option>
+
+                        <option value="Malappuram">
+                            Malappuram
+                        </option>
+
+                        <option value="Kozhikode">
+                            Kozhikode
+                        </option>
+
+                        <option value="Wayanad">
+                            Wayanad
+                        </option>
+
+                        <option value="Kannur">
+                            Kannur
+                        </option>
+
+                        <option value="Kasaragod">
+                            Kasaragod
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TO PREFERENCE -->
+
+                <div class="select-group">
+
+                    <label for="toPreference">
+                        What kind of place?
+                    </label>
+
+
+                    <select id="toPreference">
+
+                        <option value="">
+                            🌟 Any famous place
+                        </option>
+
+                        <option value="beach">
+                            🏖️ Beach
+                        </option>
+
+                        <option value="temple">
+                            🛕 Temple
+                        </option>
+
+                        <option value="waterfall">
+                            🌊  Waterfall
+                        </option>
+
+                        <option value="fort">
+                            🏰 Fort
+                        </option>
+
+                        <option value="lake">
+                            🌊 Lake
+                        </option>
+
+                        <option value="museum">
+                            🏛️ Museum
+                        </option>
+
+                        <option value="dam">
+                            🌊 Dam
+                        </option>
+
+                        <option value="park">
+                            🌳 Park
+                        </option>
+
+                        <option value="viewpoint">
+                            🌄 Viewpoint
+                        </option>
+
+                        <option value="wildlife">
+                            🐘 Wildlife
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TO PLACE -->
+
+                <div class="select-group">
+
+                    <label for="toPlace">
+                        Select famous place
+                    </label>
+
+
+                    <select
+                        id="toPlace"
+                        disabled
+                    >
+
+                        <option value="">
+                            Select district first
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- API STATUS -->
+
+                <div
+                    id="toApiStatus"
+                    class="api-status"
+                ></div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 BANANA
+            ================================================== -->
+
+            <div class="banana-selection">
+
+
+                <label for="bananaSelect">
+
+                    🍌
+                    Choose your Banana
+
+                </label>
+
+
+                <select id="bananaSelect">
+
+                    <option
+                        value=""
+                        selected
+                        disabled
+                    >
+                        Select banana type
+                    </option>
+
+
+                    <option value="nendran">
+                        🍌 Nendran
+                    </option>
+
+                    <option value="palayamkodan">
+                        🍌 Palayamkodan
+                    </option>
+
+                    <option value="robusta">
+                        🍌 Robusta
+                    </option>
+
+                    <option value="ethakka">
+                        🍌 Ethakka
+                    </option>
+
+                    <option value="poovan">
+                        🍌 Poovan
+                    </option>
+
+                    <option value="redbanana">
+                        🍌 Chenkadali
+                    </option>
+
+                    <option value="mysore">
+                        🍌 Mysore Banana
+                    </option>
+
+                    <option value="njalipoovan">
+                        🍌 Njalipoovan
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- =================================================
+                 PRICE
+            ================================================== -->
+
+            <div class="price-tag">
+
+                <span>
+                    💰 Banana price
+                </span>
+
+
+                <span
+                    class="today-price"
+                    id="priceDisplay"
+                >
+                    Select a banana 🍌
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 ERROR
+            ================================================== -->
+
+            <div
+                id="errorMessage"
+                class="error-message"
+            ></div>
+
+
+            <!-- =================================================
+                 CALCULATE
+            ================================================== -->
+
+            <button
+                type="button"
+                class="btn-calc"
+                id="calculateBtn"
+            >
+
+                <span>🍌</span>
+
+                CALCULATE BANANAS
+
+                <span>🍌</span>
+
+            </button>
+
+
+            <!-- OSM CREDIT -->
+
+            <p class="osm-credit">
+
+                Location data ©
+
+                <a
+                    href="https://www.openstreetmap.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    OpenStreetMap contributors
+                </a>
+
+                · Search powered by Photon
+
+            </p>
+
+
+        </section>
+
+
+        <!-- =================================================
+             OUTPUT PAGE
+        ================================================== -->
+
+        <section
+            class="output-page"
+            id="outputPage"
+        >
+
+
+            <h2 class="output-title">
+
+                🍌
+
+                BANANA RESULT
+
+                🍌
+
+            </h2>
+
+
+            <!-- ROUTE -->
+
+            <div
+                class="route-pill"
+                id="routeDisplay"
+            >
+                Route
+            </div>
+
+
+            <!-- ACTUAL PLACES -->
+
+            <div class="place-route">
+
+
+                <div>
+
+                    📍
+
+                    <strong id="resultFrom">
+                        From
+                    </strong>
+
+                </div>
+
+
+                <span>
+                    →
+                </span>
+
+
+                <div>
+
+                    🎯
+
+                    <strong id="resultTo">
+                        To
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 BANANA COUNT
+            ================================================== -->
+
+            <div class="banana-result">
+
+
+                <div class="result-label">
+
+                    🍌 BANANAS NEEDED
+
+                </div>
+
+
+                <div
+                    class="big-number"
+                    id="bananaCountDisplay"
+                >
+                    0
+                </div>
+
+
+                <div class="banana-word">
+
+                    BANANAS 🍌
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 OVAL RESULT BOXES
+            ================================================== -->
+
+            <div class="result-pills">
+
+
+                <!-- DISTANCE -->
+
+                <div class="result-pill">
+
+                    <div class="pill-icon">
+                        📏
+                    </div>
+
+
+                    <div class="pill-content">
+
+                        <span class="pill-title">
+                            Distance
+                        </span>
+
+
+                        <strong id="distanceDisplay">
+                            0 km
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BANANA -->
+
+                <div class="result-pill">
+
+                    <div class="pill-icon">
+                        🍌
+                    </div>
+
+
+                    <div class="pill-content">
+
+                        <span class="pill-title">
+                            Banana Type
+                        </span>
+
+
+                        <strong id="bananaTypeDisplay">
+                            -
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VALUE -->
+
+                <div class="result-pill">
+
+                    <div class="pill-icon">
+                        💰
+                    </div>
+
+
+                    <div class="pill-content">
+
+                        <span class="pill-title">
+                            Banana Value
+                        </span>
+
+
+                        <strong id="totalPriceDisplay">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- =================================================
+                 FUNNY MESSAGE
+            ================================================== -->
+
+            <div
+                class="funny-message"
+                id="funnyMessage"
+            ></div>
+
+
+            <!-- =================================================
+                 BACK
+            ================================================== -->
+
+            <button
+                type="button"
+                class="btn-back"
+                id="backBtn"
+            >
+
+                🔙
+
+                GO BACK & CALCULATE AGAIN
+
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
